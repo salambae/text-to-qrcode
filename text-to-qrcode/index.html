@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text to qrcode</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="content">
+    	<h1 style="letter-spacing: 1px;font-family: consolas;">text to qrcode</h1>
+    	<label>This web app is using qr code API (its free !),</label><br>
+    	<label>you can access the api by visiting</label><br>
+    	<a href="https://github.com/salambae/qr-code-API/" style="text-decoration: none; color: blue;">salambae.github.com/qr-code-API</a>
+    <div class="content-form">
+    	<table border="0">
+    		<tbody>
+    			<tr>
+    				<div id="warning-sign" class="warning-sign"><label>Don't let the input field is empty</label></div>
+    			</tr>
+    			<tr>
+    				<td>Text or url {string}</td>
+    			</tr>
+    			<tr>
+  					<td><input type="text" id="qr-code" placeholder="Enter your text or url"></td>
+    			</tr>
+    		</tbody>
+    	</table>
+  		<table border="0">
+  			<tbody>
+  				<tr>
+  					<td>Size {integer}</td>
+  					<td>Border {integer}</td>
+  				</tr>
+  				<tr>
+  					<td><input type="number" id="size-of-code" placeholder="ex: 10"></td>
+  					<td><input type="number" id="border-of-code" placeholder="ex: 4"></td>
+  				</tr>
+  				<tr>
+  					<td>Background Color {string}</td>
+  					<td>QR Version {integer}</td>
+  				</tr>
+  				<tr>
+  					<td><input type="text" id="bg-color" placeholder="ex: white"></td>
+  					<td><input type="number" id="qr-version" placeholder="ex: 1"></td>
+  				</tr>
+  				<tr>
+  					<td><button onclick="get_qr()">Convert QR</button></td>
+  					<td><button onclick="reset()">Reset</button></td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+		<label>Result will be appear here:</label><br>
+		<a style="display: none; text-decoration: none; color: blue;" id="linkDownload" href="">Download</a>
+    	<center>
+			<img id="theImage" src="" width="200" height="200">
+		</center>
+	</div>
+<script src="script.js">
+</script>
+</body>
+</html> 
